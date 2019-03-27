@@ -78,7 +78,7 @@ requirejs.config({
         dropzone              : '../bower_components/dropzone/dist/dropzone-amd-module',
         toBlob                : '../bower_components/blueimp-canvas-to-blob/js/canvas-to-blob',
         blobjs                : '../bower_components/Blob/Blob',
-        fileSaver             : '../bower_components/FileSaver/FileSaver',
+        fileSaver             : '../bower_components/FileSaver/dist/FileSaver',
         enquire               : '../bower_components/enquire/dist/enquire.min',
         hammerjs              : '../bower_components/hammerjs/hammer',
         jHammer               : '../bower_components/jquery-hammerjs/jquery.hammer',
