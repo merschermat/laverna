@@ -196,7 +196,8 @@ define([
         });
 
         describe('.getAll()', function() {
-
+            console.log('hidufhudsfuidfsho');
+            
             beforeEach(function() {
                 sandbox.stub(Module.prototype, 'getAll').returns(Q.resolve(collection));
             });

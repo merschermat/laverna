@@ -31,6 +31,7 @@ define([
 
         conditions: {
             active   : {trash      : 0},
+            task : {trash :0},
             favorite : {isFavorite : 1, trash : 0},
             trashed  : {trash      : 1},
             notebook : function(args) {

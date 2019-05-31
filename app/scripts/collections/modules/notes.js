@@ -149,17 +149,21 @@ define([
          * @type object options
          */
         getAll: function(options) {
+            
             var getAll    = _.bind(ModuleObject.prototype.getAll, this),
                 self      = this,
                 sortField = Radio.request('configs', 'get:config', 'sortnotes');
 
             options.filter = options.filter || 'active';
-
+            // if(options.filter == 'task'){
+            //     options.filter = 'taskActive'
+            // }
             this.Collection.prototype.sortField = sortField;
 
             return getAll(options)
             .then(function(collection) {
-                self._filterOnFetch(collection, options);
+                // self._filterOnFetch(collection, options);
+                console.log(options);
                 return collection;
             });
         },
@@ -168,6 +172,7 @@ define([
          * Use Backbone's filters when IndexedDB is not available
          */
         _filterOnFetch: function(collection, options) {
+            
             collection.filterList(options.filter, options);
         },
 
