@@ -59,6 +59,7 @@ define([
          * Renders the sidebar view
          */
         show: function(notes) {
+            
             // Destroy old view
             if (this.view) {
                 this.view.trigger('destroy');
@@ -70,6 +71,8 @@ define([
                 collection: notes,
                 args      : this.options
             });
+            console.log(this.view.collection);
+
             Radio.request('global', 'region:show', 'sidebar', this.view);
         },
 
@@ -96,7 +99,7 @@ define([
 
             // Fetch data
             Radio.request('notes', 'get:all', options)
-            .then(this.show);
+            .then(this.show);            
         }, 100),
 
         onModelActive: function(model) {
