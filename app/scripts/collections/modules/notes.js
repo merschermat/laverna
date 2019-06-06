@@ -163,7 +163,7 @@ define([
             return getAll(options)
             .then(function(collection) {
                 // self._filterOnFetch(collection, options);
-                console.log(options);
+            
                 return collection;
             });
         },

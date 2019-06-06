@@ -71,7 +71,6 @@ define([
                 collection: notes,
                 args      : this.options
             });
-            console.log(this.view.collection);
 
             Radio.request('global', 'region:show', 'sidebar', this.view);
         },
